@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chronicle of Curiosities — Spot the Difference</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="frame">
+  <header id="hud">
+    <div class="brand">
+      <span class="brand-mark">✦</span>
+      <div>
+        <h1>Chronicle of Curiosities</h1>
+        <p id="sceneSub">A detective's picture-restoration journal</p>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div class="counter" id="counter" aria-live="polite">Found: 0 / 7 &nbsp;•&nbsp; 7 Remaining</div>
+      <div class="hud-meta"><span id="sceneName">Scene 1 — The Clockmaker's Midnight Workshop</span></div>
+      <div class="hud-meta"><span id="timer">⏱ 2:00</span> <span id="hints">🔍 Hints: 3</span> <span id="score">Score 0</span></div>
+    </div>
+  </header>
+  <main id="boards">
+    <figure class="panel" id="panelA">
+      <figcaption>Original</figcaption>
+      <canvas id="canvasA" width="616" height="360"></canvas>
+      <div class="loupe" id="loupeA"></div>
+    </figure>
+    <figure class="panel" id="panelB">
+      <figcaption>Altered</figcaption>
+      <canvas id="canvasB" width="616" height="360"></canvas>
+      <div class="loupe" id="loupeB"></div>
+    </figure>
+  </main>
+  <footer id="bar">
+    <span id="message">Find 7 differences. Click a difference on either picture — or move with ← → ↑ ↓ and press Enter.</span>
+    <span class="keys"><b>1–5</b> scenes &nbsp; <b>H</b> hint &nbsp; <b>N</b> next &nbsp; <b>P</b> pause &nbsp; <b>R</b> restart</span>
+  </footer>
+  <div id="overlay" class="hidden">
+    <div id="overlayCard">
+      <h2 id="overlayTitle">Chronicle of Curiosities</h2>
+      <p id="overlayText">Five hand-painted scenes. Seven differences in each. Restore them all.</p>
+      <button id="overlayBtn">Begin the restoration</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
