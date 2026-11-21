@@ -1,12 +1,13 @@
-// A working best-game-01 entry (Node 22, standard library only): the game is this directory's
-// game/ folder, plain static files a desktop browser loads offline (game/index.html and its ES
-// modules, no library and no network request), and the program hands it in. It copies game/ and
-// screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the
-// judge reads, with the vendored make.fun library. A starting point, not a winner: Block Dodger, a
-// plain 2D canvas game where a paddle dodges falling blocks and catches coins, with a title screen,
-// score, lives and levels, game over and restart, flat colours and no sound. Build your own game
-// (any genre, any library you vendor under game/, or none), put your 3 or 4 PNG or JPEG screenshots
-// in screenshots/ (the first by name is the cover) and run it.
+// Chronicle of Curiosities — a spot-the-difference game (Node 22, standard
+// library only). Five scenes, seven differences each, all art drawn
+// procedurally with Canvas 2D and all sound synthesised with Web Audio, so the
+// game is this directory's game/ folder: plain static files a desktop browser
+// loads offline (game/index.html and its ES modules, no library and no network
+// request). This program hands it in: it copies game/ and screenshots/ from
+// beside this file to /output and writes /output/dossier.json, the summary the
+// judge reads, with the vendored make.fun library. The four screenshots in
+// screenshots/ are real browser renders, each 1280x480, each taken mid-game
+// with some differences found and some still unfound.
 //
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
@@ -39,3 +40,7 @@ writeFileSync(
     game_path_max_bytes: 1000,
   }),
 );
+
+// Name the entry on stdout so a run's log shows what was handed in; the
+// files written above are unchanged by this line.
+console.log(`Chronicle of Curiosities: wrote game/, screenshots/, dossier.json to ${out}`);
